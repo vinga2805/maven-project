@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages{
+
+        stage('Build'){
+
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage('Deploy to stage'){
+
+            steps{
+                echo "Archiving Arctifacts..."
+                archiveArtifacts arctifacts: '**/*.war'
+                
+            }
+        }
+    }
+}
