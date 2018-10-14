@@ -12,7 +12,7 @@ pipeline {
 
             steps{
                 echo "Archiving Arctifacts..."
-                archive '**/*.war'
+                archiveArtifacts artifacts: '**/target/*.war'
                 
             }
         }
