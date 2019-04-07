@@ -9,7 +9,7 @@ pipeline {
                 export M2_HOME=/opt/maven
                 export PATH=${M2_HOME}/bin:${PATH}
                 '''
-                sh '/opt/maven/mvn clean package'
+                sh '/opt/maven/bin/mvn clean package'
             }
         }
         stage('Deploy to stage'){
