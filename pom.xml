@@ -21,13 +21,18 @@
     <module>webapp</module>
   </modules>
 
-  <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>https://vinga2805.jfrog.io/vinga2805/libs-snapshot-local/</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>libs-release</name>
+            <url>https://vinga2805.jfrog.io/vinga2805/libs-release-local/</url>
+        </repository>
+    </distributionManagement>
 
   <build>
     <plugins>
